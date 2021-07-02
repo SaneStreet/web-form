@@ -24,7 +24,7 @@
 
 		<div class="terms">
 			<input type="checkbox" required v-model="terms">
-			<label>Accept terms and conditions</label>
+			<label @click="checkTheBox">Accept terms and conditions</label>
 		</div>
 
 		<div class="submit">
@@ -78,6 +78,9 @@ export default {
 				console.log('skills: ', this.skills)
 				console.log('terms accepted: ', this.terms)
 			}
+		},
+		checkTheBox(terms) {
+			this.terms = !this.terms;
 		}
 	}
 }
@@ -121,20 +124,20 @@ export default {
 		display: inline-block;
 		margin: 20px 10px 0 0;
 		padding: 6px 12px;
-		background: #eee;
+		background: #dcdcdc;
 		border-radius: 20px;
 		font-size: 12px;
 		letter-spacing: 1px;
 		font-weight: bold;
-		color: #777;
+		color: #ffa500;
 		cursor: pointer;
 	}
 	button {
-		background: orangered;
+		background: #ffa500;
 		border: 0;
 		padding: 10px 20px;
 		margin-top: 20px;
-		color: #eee;
+		color: white;
 		border-radius: 20px;
 		cursor: pointer;
 	}
